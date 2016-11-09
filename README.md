@@ -1,6 +1,14 @@
-# app-generator
+# electron-app-generator
 
-> An electron-vue project
+Electron app to generate/upgrade an app or project. 
+
+Use this instead of typical CLI generator such as:
+- yeoman
+- slush
+- ...
+
+This project seeks to take the best elements of Plop and other more flexible, lightweight generators 
+while providing a much better UI/UX experience for setting up the dev environment for your project.   
 
 ## Build Setup
 
