@@ -21,7 +21,15 @@ As you make choices, the following are updated dynamically:
 You can view these updates as you make choices so you can preview what effect your choices will have
 on your project before you select `Sync`, to sync the project.  
 
+## Pre install
+
+Install electron binary globally
+
+`npm i electron -g` or `yarn add electron -g`
+
 ## Build Setup
+
+### Npm
 
 ``` bash
 # install dependencies
@@ -39,6 +47,11 @@ npm run lint
 # run webpack in production
 npm run pack
 ```
+
+### Yarn (alternative npm)
+
+`yarn install`
+
 More information can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/npm_scripts.html).
 
 ---
