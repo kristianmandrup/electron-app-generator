@@ -6,7 +6,13 @@
   </md-list>
 </template>
 <script>
+// import { mapGetters } from 'vuex'
+// import { mapState } from 'vuex'
+
 export default {
-  props: ['category']
+  props: ['category'],
+  computed: {
+    // map state and getters here
+  }
 }
 </script>

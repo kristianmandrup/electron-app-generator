@@ -16,6 +16,12 @@ Vue.material.theme.register('default', {
   accent: 'pink'
 })
 
+import Rx from 'rxjs/Rx'
+import VueRx from 'vue-rx'
+
+// tada!
+Vue.use(VueRx, Rx)
+
 Vue.use(Electron)
 Vue.use(Resource)
 Vue.use(Router)

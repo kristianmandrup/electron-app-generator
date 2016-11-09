@@ -22,6 +22,14 @@ export default [{
 }, {
   type: 'checkbox',
   name: 'color',
-  choices: [{label: 'red', value: false}, {label: 'blue', value: false}],
+  choices: [{
+    label: 'red',
+    name: 'red',
+    value: false
+  }, {
+    label: 'blue',
+    name: 'blue',
+    value: false
+  }],
   message: 'Favorite color?'
 }]

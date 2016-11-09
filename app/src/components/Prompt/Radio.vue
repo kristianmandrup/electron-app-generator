@@ -10,6 +10,12 @@ export default {
     return {
       value: ''
     }
+  },
+  watch: {
+    value: function (newValue) {
+      console.log('watched confirm change', newValue)
+      this.$store.dispatch('choice', {name: this.prompt.name, choice: this.value})
+    }
   }
 }
 </script>

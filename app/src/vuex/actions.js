@@ -7,3 +7,9 @@ export const decrementMain = ({ commit }) => {
 export const incrementMain = ({ commit }) => {
   commit(types.INCREMENT_MAIN_COUNTER)
 }
+
+export const choice = ({ commit }, payload) => {
+  console.log('choice action', payload)
+  commit(types.CHOICE, payload)
+}
+
