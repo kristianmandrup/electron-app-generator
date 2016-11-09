@@ -11,7 +11,7 @@
   </section> 
 </template>
 <script>
-import * as prompt from './prompt'
+import * as prompt from './Prompt'
 
 export default {
   components: {

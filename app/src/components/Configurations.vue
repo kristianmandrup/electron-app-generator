@@ -1,6 +1,5 @@
 <template>
   <section id="configurations">
-    <div class="md-headline">Configuration</div>
     <md-tabs>    
       <md-tab :id="name" :md-label="category.label" v-for="(category, name) in categories" :md-active="category.active">
         <configuration :category="category" />
