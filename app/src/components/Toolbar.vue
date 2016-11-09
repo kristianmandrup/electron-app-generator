@@ -1,7 +1,7 @@
 <template>
   <md-toolbar class="md-large">
     <div class="md-toolbar-container">
-      <md-button class="md-icon-button">
+      <md-button class="md-icon-button" @click="toggleLeftSidenav">
         <md-icon>menu</md-icon>
       </md-button>
 
@@ -27,5 +27,11 @@
 </template>  
 <script>
 export default {
+  props: ['refs'],
+  methods: {
+    toggleLeftSidenav () {
+      this.refs.leftSidenav.toggle()
+    }
+  }
 }
 </script>

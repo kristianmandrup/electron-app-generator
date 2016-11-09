@@ -1,14 +1,25 @@
 # electron-app-generator
 
-Electron app to generate/upgrade an app or project. 
+Electron app configure a project environment/setup, including dependencies & configuration for: 
+- runtime 
+- development environment & tools
 
-Use this instead of typical CLI generator such as:
-- yeoman
-- slush
+You can use this app instead of typical CLI generator such as:
+- [yeoman](http://yeoman.io/)
+- [slush](https://www.npmjs.com/package/slush-node)
 - ...
 
-This project seeks to take the best elements of Plop and other more flexible, lightweight generators 
-while providing a much better UI/UX experience for setting up the dev environment for your project.   
+This project aims to provide a much better UI/UX experience!
+Prompts are divided into categories you can select via the main tabs.
+Each category can have one or more sub-categories if needed.
+Each category displays a form with various inputs where you can select your choices.
+As you make choices, the following are updated dynamically:
+- npm modules to be installed
+- scripts to be configured
+- ...
+
+You can view these updates as you make choices so you can preview what effect your choices will have
+on your project before you select `Sync`, to sync the project.  
 
 ## Build Setup
 

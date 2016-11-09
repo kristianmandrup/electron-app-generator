@@ -1,13 +1,17 @@
 <template>
   <div>
-    <router-view></router-view>
+    <landing-page></landing-page>
   </div>
 </template>
 
 <script>
   import store from 'src/vuex/store'
+  import LandingPage from './components/LandingPage'
 
   export default {
+    components: {
+      LandingPage
+    },
     store
   }
 </script>
