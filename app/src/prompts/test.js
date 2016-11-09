@@ -16,4 +16,9 @@ export default [{
   choice: 'vue2',
   choices: [{label: 'Vue 2', value: 'vue2'}, {label: 'React', value: 'react'}],
   message: 'UI framework?'
+}, {
+  type: 'radio',
+  name: 'graphql',
+  choices: [{label: 'Apollo', value: 'apollo'}, {label: 'Relay', value: 'relay'}],
+  message: 'GraphQL client?'
 }]

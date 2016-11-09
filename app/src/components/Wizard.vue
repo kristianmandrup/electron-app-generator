@@ -5,6 +5,7 @@
       <prompt-password v-if="is(prompt, 'password')" :prompt="prompt"/>
       <prompt-confirm v-if="is(prompt, 'confirm')" :prompt="prompt"/>
       <prompt-checkbox v-if="is(prompt, 'checkbox')" :prompt="prompt"/>
+      <prompt-radio v-if="is(prompt, 'radio')" :prompt="prompt"/>
       <prompt-list v-if="is(prompt, 'list')" :prompt="prompt"/>
     </div>
   </section> 
