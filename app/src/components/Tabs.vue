@@ -1,11 +1,9 @@
 <template>
-  <section>
-    <md-tabs v-for="(category, name) in categories">
-      <md-tab :id="name" :md-label="category.label">
-        <wizard :category="category" />
-      </md-tab>
-    </md-tabs>
-  </section>
+  <md-tabs>
+    <md-tab :id="name" :md-label="category.label" v-for="(category, name) in categories">
+      <wizard :category="category" />
+    </md-tab>
+  </md-tabs>
 </template>
 <script>
 import Wizard from './Wizard'

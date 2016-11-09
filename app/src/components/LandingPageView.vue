@@ -1,9 +1,7 @@
 <template>
   <section v-md-theme="'default'">
-    <div class="md-display-3">App wizard</div>
     <toolbar />
     <tabs />
-    <button-tabs />
   </section>
 </template>
 

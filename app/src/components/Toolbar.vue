@@ -17,7 +17,7 @@
     </div>
 
     <div class="md-toolbar-container">
-      <h2 class="md-title">Vue Material</h2>
+      <h2 class="md-title">DevEnv configurator</h2>
 
       <md-button class="md-fab md-fab-bottom-right">
         <md-icon>add</md-icon>
