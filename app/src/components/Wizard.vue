@@ -1,13 +1,6 @@
 <template>
-  <section class="input-list">
-    <div v-for="prompt in category.prompts" class="field-group">
-      <prompt-input v-if="is(prompt, 'input')" :prompt="prompt"/>
-      <prompt-password v-if="is(prompt, 'password')" :prompt="prompt"/>
-      <prompt-confirm v-if="is(prompt, 'confirm')" :prompt="prompt"/>
-      <prompt-checkbox v-if="is(prompt, 'checkbox')" :prompt="prompt"/>
-      <prompt-radio v-if="is(prompt, 'radio')" :prompt="prompt"/>
-      <prompt-list v-if="is(prompt, 'list')" :prompt="prompt"/>
-    </div>
+  <section class="input-list field-group">
+    <component v-for="prompt in category.prompts" :is="componentType(prompt.type)" :prompt="prompt">
   </section> 
 </template>
 <script>
@@ -19,12 +12,10 @@ export default {
   },
   props: ['category'],
   methods: {
-    is (prompt, type) {
-      var patt = new RegExp(type)
-      if (prompt.type === 'expand' && type === 'list') {
-        return true
-      }
-      return patt.test(prompt.type)
+    // See https://github.com/vuejs/vue/issues/3270#issuecomment-232263320
+    componentType (type) {
+      type = ['expand', 'raw-list'].includes(type) ? 'list' : type
+      return `prompt-${type}`
     }
   }
 }
