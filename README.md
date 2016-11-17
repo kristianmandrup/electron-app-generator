@@ -145,6 +145,15 @@ export default {
 This means that an `ava` choice in to the `unit` prompt (of the `test` category) will add
 certain modules, scripts etc. suitable for that choice to the side effects of the generator.
 
+## Configuraiton models and docs
+
+Please look in `configurations`:
+-  `/model`
+- `/docs`
+- `package.jso`
+
+In order to see what we are aiming for ;)
+
 ## License
 
 MIT
