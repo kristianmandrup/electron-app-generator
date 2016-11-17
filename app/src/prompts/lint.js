@@ -1,7 +1,7 @@
 export default [{
-  type: 'raw-list',
-  name: 'lib',
-  choice: 'standard',
+  type: 'list',
+  name: 'lint',
+  message: 'Lint',
   choices: [{
     label: 'standard',
     value: 'standard'
@@ -9,5 +9,5 @@ export default [{
     label: 'xo',
     value: 'xo'
   }],
-  message: 'Style lint'
+  default: 'standard'
 }]

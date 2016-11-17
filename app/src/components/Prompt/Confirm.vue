@@ -1,5 +1,9 @@
 <template>
-  <md-switch :name="prompt.name" class="md-primary" v-model="value">{{ prompt.message }}</md-switch> 
+  <md-switch
+    :name="prompt.name"
+    class="md-primary"
+    value="prompt.default"
+    v-model="value">{{ prompt.message }}</md-switch>
 </template>
 <script>
 export default {

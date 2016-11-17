@@ -1,5 +1,14 @@
 # TODO
 
+## Common validators
+
+We should be able to declare validators declaratively and not have to specify a function for common cases:
+- number
+- alphanumeric
+- ...
+
+Use a validation library such as [validatejs](https://validatejs.org/) or [validatorjs](http://validatorjs.org/)
+
 ## Use VueX store
 
 If a piece of state strictly belongs to a single component, it could be just fine leaving it as local state.

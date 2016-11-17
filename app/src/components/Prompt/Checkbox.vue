@@ -5,9 +5,10 @@
       :name="choice.name"
       :id="choice.name"
       class="md-primary"
+      value="prompt.default"
       @change="chosen"
       @input="chosen"
-      v-model="colors[choice.name]">{{ choice.label }}</md-checkbox>
+      v-model="colors[choice.name]">{{ choice.label || choice.value }}</md-checkbox>
   </div>
 </template>
 <script>

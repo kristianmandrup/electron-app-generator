@@ -3,10 +3,10 @@
     <input type="checkbox" @click="onChange($event)" v-model="myVal"/>
     <md-input-container :class="{'md-input-invalid': isInvalid}">
       <label>{{ prompt.message }}</label>
-      <md-input :name="prompt.name" v-model="value"></md-input>
+      <md-input :name="prompt.name" v-model="value" value="prompt.default"></md-input>
       <span v-if="isInvalid" class="md-error">Validation message</span>
     </md-input-container>
-  </form> 
+  </form>
 </template>
 <script>
 import debounce from 'lodash.debounce'
