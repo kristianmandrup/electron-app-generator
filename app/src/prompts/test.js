@@ -1,6 +1,6 @@
 export default [{
   type: 'list',
-  name: 'test',
+  name: 'unit',
   choice: 'ava',
   choices: [{label: 'Ava', value: 'ava'}, {label: 'Mocha', value: 'mocha'}],
   message: 'Test library'

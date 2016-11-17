@@ -1,3 +1,4 @@
 import test from './test'
+import lint from './lint'
 
-export { test }
+export { test, lint }

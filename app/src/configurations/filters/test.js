@@ -1,5 +1,5 @@
 export default {
-  test: {
+  unit: {
     ava: {
       modules: ['ava', 'ava-spec'],
       scripts: {
