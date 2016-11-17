@@ -1,3 +1,7 @@
+import * as filters from './filters'
+
+const log = console.log
+
 function matches (choice, match) {
   if (choice === true) return true
   if (Array.isArray(choice)) {
@@ -9,9 +13,9 @@ function matches (choice, match) {
   return false
 }
 
-import filters from './filters'
-
 function filter (key, choices) {
+  log('filter', key, choices)
+
   return filters[key].reduce((obj, matcher) => {
     let matchKeys = Object.keys(matcher)
     for (let mk of matchKeys) {
@@ -27,6 +31,7 @@ export default {
   // TODO: generate based on declarative filters
   filtered: (choices) => {
     let keys = Object.keys(filters)
+    log('keys', keys)
     // test, ...
     return keys.map((key) => {
       return filters[key] ? filter(key, choices) : choices

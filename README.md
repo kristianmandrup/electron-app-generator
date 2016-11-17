@@ -57,3 +57,11 @@ More information can be found [here](https://simulatedgreg.gitbooks.io/electron-
 ---
 
 This project was generated from [electron-vue](https://github.com/SimulatedGREG/electron-vue) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about this project can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
+
+### Testing
+
+`npm run ava` - ava unit tests
+`npm run unit` - karma unit tests
+`npm run e2e` - e2e tests
+
+[ava](https://github.com/avajs/ava) is configured in `package.json` under the `ava` entry.

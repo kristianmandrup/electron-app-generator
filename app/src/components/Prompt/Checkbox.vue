@@ -20,9 +20,9 @@ export default {
   },
   methods: {
     chosen (value, $event) {
-      let el = $event.srcElement.querySelector('input[type="checkbox"]')
-      let choice = {[el.name]: value}
-      console.log('checkbox value', value, el, choice, this.colors)
+      // let el = $event.srcElement.querySelector('input[type="checkbox"]')
+      // let choice = {[el.name]: value}
+      // console.log('checkbox value', value, el, choice, this.colors)
       this.$store.dispatch('choice', this.colors)
     }
   }
