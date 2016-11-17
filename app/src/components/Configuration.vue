@@ -8,13 +8,17 @@
 <script>
 // import { mapGetters } from 'vuex'
 // import { mapState } from 'vuex'
+import filter from '../configurations/filter'
 
 export default {
   props: ['category'],
   computed: {
     filteredItems () {
       // this.choices
-      console.log('choices', this.name, this.$store.state)
+      let choices = this.$store.state.choices
+      let filteredChoices = filter.filtered(choices)
+
+      console.log('choices', filteredChoices)
       return this.category.items
       // return this.category.items.filter((item) => {
       //   console.log('item', name)

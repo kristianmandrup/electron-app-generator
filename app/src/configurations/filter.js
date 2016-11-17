@@ -11,22 +11,25 @@ function matches (choice, match) {
 
 import filters from './filters'
 
+function filter (key, choices) {
+  return filters[key].reduce((obj, matcher) => {
+    let matchKeys = Object.keys(matcher)
+    for (let mk of matchKeys) {
+      if (matches(choices[key], mk)) {
+        obj[key] = matcher[mk]
+      }
+      return obj
+    }
+  }, {})
+}
+
 export default {
   // TODO: generate based on declarative filters
-  filter: (choices) => {
+  filtered: (choices) => {
     let keys = Object.keys(filters)
-
     // test, ...
-    keys.map((key) => {
-      return filters[key].reduce((obj, matcher) => {
-        let matchKeys = Object.keys(matcher)
-        for (let mk of matchKeys) {
-          if (matches(choices[key], mk)) {
-            obj[key] = matcher[mk]
-          }
-          return obj
-        }
-      }, {})
+    return keys.map((key) => {
+      return filters[key] ? filter(key, choices) : choices
     })
   }
 }

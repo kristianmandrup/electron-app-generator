@@ -294,7 +294,7 @@ autoprefixer@^6.3.1:
     postcss "^5.2.5"
     postcss-value-parser "^3.2.3"
 
-autosize@^3.0.17:
+autosize@^3.0.17, autosize@^3.0.18:
   version "3.0.18"
   resolved "https://registry.yarnpkg.com/autosize/-/autosize-3.0.18.tgz#75ecffa2debb2c6398001a8847a570ad6bf94fd4"
 
@@ -4230,6 +4230,16 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
+marcosmoura/vue-material#master:
+  name vue-material
+  version "0.3.1"
+  resolved "https://codeload.github.com/marcosmoura/vue-material/tar.gz/d2f22114aa15ed45efb6be7ca92235db9bcf46c2"
+  dependencies:
+    autosize "^3.0.18"
+    element.scrollintoviewifneeded-polyfill "^1.0.1"
+    scopedQuerySelectorShim lazd/scopedQuerySelectorShim
+    vue "^2.0.6"
+
 math-expression-evaluator@^1.2.14:
   version "1.2.14"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.14.tgz#39511771ed9602405fba9affff17eb4d2a3843ab"
@@ -5859,7 +5869,7 @@ sax@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.1.tgz#7b8e656190b228e81a66aea748480d828cd2d37a"
 
-"scopedQuerySelectorShim@github:lazd/scopedQuerySelectorShim":
+"scopedQuerySelectorShim@github:lazd/scopedQuerySelectorShim", scopedQuerySelectorShim@lazd/scopedQuerySelectorShim:
   version "0.0.0"
   resolved "https://codeload.github.com/lazd/scopedQuerySelectorShim/tar.gz/0ef4855a7944207510cdc0375a43956b2fc18410"
 
@@ -6867,6 +6877,10 @@ vue-template-compiler@^2.0.4:
 vue-template-es2015-compiler@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.1.1.tgz#ae1ddcf9f6c7eb95df304560ba9a803f3ec9ffb4"
+
+vue@^2.0.6:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.0.7.tgz#83698ef4f76ce702f425b5576b06ff28e12db143"
 
 vue2-dragula:
   version "2.1.1"
