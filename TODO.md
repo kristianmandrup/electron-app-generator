@@ -2,13 +2,38 @@
 
 ## Use VueX store
 
-If a piece of state strictly belongs to a single component, it could be just fine leaving it as local state. 
+If a piece of state strictly belongs to a single component, it could be just fine leaving it as local state.
 You should weigh the trade-offs and make decisions that fit the development needs of your app.
+
+For a better/simpler way to connect components to Vuex store, use [vuex-connect](https://www.npmjs.com/package/vuex-connect)
+
+```js
+import { connect } from 'vuex-connect'
+import HelloComponent from './hello-component'
+
+export default connect({
+  stateToProps: {
+    message: state => state.message
+  },
+
+  methodsToEvents: {
+    update: ({ commit }, value) => commit('UPDATE_INPUT', value)
+  },
+
+  lifecycle: {
+    ready: ({ commit }) => {
+      fetch(URL)
+        .then(res => res.text())
+        .then(value => commit('UPDATE_INPUT', value));
+    }
+  }
+})('hello', HelloComponent)
+```
+
+Taditional way, using `mapState`
 
 ```js
 import { mapState } from 'vuex'
-
-
   // ...
   computed: mapState({
     // arrow functions can make the code very succinct!
@@ -27,7 +52,7 @@ import { mapState } from 'vuex'
   computed: mapState([
     // map this.count to store.state.count
     'count'
-  ])  
+  ])
 
   computed: {
     localComputed () { /* ... */ },

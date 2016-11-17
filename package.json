@@ -81,6 +81,7 @@
     "vue": "^2.0.5",
     "vue-material": "marcosmoura/vue-material#master",
     "vue-rx": "^2.1.1",
-    "vue2-dragula": "^2.1.1"
+    "vue2-dragula": "^2.1.1",
+    "vuex-connect": "^1.1.1"
   }
 }
