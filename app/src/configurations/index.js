@@ -16,9 +16,11 @@ export default {
     label: 'Scripts',
     icon: 'send',
     items: [{
-      name: 'lint'
+      name: 'lint',
+      value: 'eslint'
     }, {
-      name: 'test'
+      name: 'test',
+      value: 'ava'
     }]
   },
   components: {
