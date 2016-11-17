@@ -4,7 +4,7 @@ const Configurations = require('components/Configurations')
 export default [
   {
     path: '/',
-    name: 'landing-page',
+    name: 'home',
     component: PromptTabs
   },
   {

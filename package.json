@@ -79,7 +79,8 @@
     "lodash.debounce": "^4.0.8",
     "rxjs": "^5.0.0-rc.2",
     "vue": "^2.0.5",
-    "vue-material": "kristianmandrup/vue-material#master",
-    "vue-rx": "^2.1.1"
+    "vue-material": "marcosmoura/vue-material#master",
+    "vue-rx": "^2.1.1",
+    "vue2-dragula": "^2.1.1"
   }
 }

@@ -1,7 +1,7 @@
 # electron-app-generator
 
-Electron app configure a project environment/setup, including dependencies & configuration for: 
-- runtime 
+Electron app to configure a project environment/setup, including dependencies & configuration for:
+- runtime
 - development environment & tools
 
 You can use this app instead of typical CLI generator such as:
@@ -19,7 +19,7 @@ As you make choices, the following are updated dynamically:
 - ...
 
 You can view these updates as you make choices so you can preview what effect your choices will have
-on your project before you select `Sync`, to sync the project.  
+on your project before you select `Sync`, to sync the project.
 
 ## Pre install
 

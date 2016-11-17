@@ -8,6 +8,10 @@ import routes from './routes'
 
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
+import 'dragula/dist/dragula.css'
+
+var { Vue2Dragula } = require('vue2-dragula')
+Vue.use(Vue2Dragula)
 
 Vue.use(VueMaterial)
 

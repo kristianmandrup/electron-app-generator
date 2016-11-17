@@ -1,5 +1,6 @@
 export default {
   modules: {
+    name: 'modules',
     label: 'Modules',
     icon: 'send',
     items: [{
@@ -11,6 +12,7 @@ export default {
     }]
   },
   scripts: {
+    name: 'scripts',
     label: 'Scripts',
     icon: 'send',
     items: [{
@@ -20,6 +22,7 @@ export default {
     }]
   },
   components: {
+    name: 'components',
     label: 'Components',
     icon: 'send',
     items: [{

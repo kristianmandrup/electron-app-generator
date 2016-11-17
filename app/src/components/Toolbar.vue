@@ -20,11 +20,13 @@
       <h2 class="md-title">DevEnv configurator</h2>
 
       <md-button class="md-fab md-fab-bottom-right">
-        <md-icon>add</md-icon>
+        <router-link :to="{name: 'home'}">
+          <md-icon>add</md-icon>
+        </router-link>
       </md-button>
     </div>
   </md-toolbar>
-</template>  
+</template>
 <script>
 export default {
   props: ['refs'],
