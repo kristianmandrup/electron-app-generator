@@ -7,7 +7,9 @@ We should be able to declare validators declaratively and not have to specify a 
 - alphanumeric
 - ...
 
-Use a validation library such as [validatejs](https://validatejs.org/) or [validatorjs](http://validatorjs.org/)
+Use a validation library such as:
+- [validatejs](https://validatejs.org/)
+- [validatorjs](http://validatorjs.org/) see [repo](https://github.com/chriso/validator.js)
 
 ## Use VueX store
 
