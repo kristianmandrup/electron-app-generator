@@ -65,3 +65,89 @@ This project was generated from [electron-vue](https://github.com/SimulatedGREG/
 `npm run e2e` - e2e tests
 
 [ava](https://github.com/avajs/ava) is configured in `package.json` under the `ava` entry.
+
+## Architecture
+
+The goal is to make it as declarative as possible while making the least amount of sacrifices...
+
+In the configurations you can define all the modules, script etc. that the generator can possibly generate
+as side effects. For each module you can define a mode such as `dev` for development etc.
+
+```js
+export default {
+  modules: {
+    name: 'modules',
+    label: 'Modules',
+    icon: 'send',
+    items: [{
+      mode: 'dev',
+      name: 'ava'
+    }, {
+      mode: 'dev',
+      name: 'ava-spec'
+    }]
+  },
+  scripts: {
+    name: 'scripts',
+    label: 'Scripts',
+    icon: 'send',
+    items: [{
+      name: 'lint',
+      value: 'eslint'
+    }, {
+      name: 'test',
+      value: 'ava'
+    }]
+  },
+```
+
+### Prompts
+
+The prompts are specified declaratively as well. Here we define a prompt for
+choosing the test framework of choice, either `mocha` or `ava`.
+Prompts also categorized into `test`, `ui` etc.
+
+```js
+export default [{
+  type: 'list',
+  name: 'test',
+  choice: 'ava',
+  choices: [{label: 'Ava', value: 'ava'}, {label: 'Mocha', value: 'mocha'}],
+  message: 'Test library'
+},
+  // ...
+```
+
+### Filters
+
+You can then setup filters, which filter all the modules, scripts etc. based on the choices made
+using the answers to the prompts. Filters are categorized using the same categories as for prompts.
+
+```js
+export default {
+  unit: {
+    ava: {
+      modules: ['ava', 'ava-spec'],
+      scripts: {
+        test: 'ava'
+      }
+    },
+    mocha: {
+      modules: ['mocha', 'mocha-spec'],
+      scripts: {
+        test: 'mocha'
+      }
+    }
+  }
+}
+```
+
+This means that an `ava` choice in to the `unit` prompt (of the `test` category) will add
+certain modules, scripts etc. suitable for that choice to the side effects of the generator.
+
+## License
+
+MIT
+
+(c) Kristian Mandrup 2016
+
