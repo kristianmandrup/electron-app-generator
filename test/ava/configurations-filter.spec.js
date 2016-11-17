@@ -9,6 +9,8 @@ test('configurations.filter', t => {
   }
 
   let filtered = filter.filtered(choices)
+  log('filtered', filtered)
+  let hasAva = filtered.test.modules.includes('ava')
 
-  t.true(filtered.modules.includes('ava'), 'contains ava')
+  t.true(hasAva, 'contains ava')
 })

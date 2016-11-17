@@ -1,29 +1,35 @@
 import * as filters from './filters'
+import merge from 'lodash.merge'
 
 const log = console.log
 
 function matches (choice, match) {
-  if (choice === true) return true
-  if (Array.isArray(choice)) {
-    if (choice.includes(match)) return true
-  }
-  if (typeof choice === 'object') {
-    if (choice[match]) return true
-  }
+  if (choice === match) return true
+  if (Array.isArray(choice) && choice.includes(match)) return true
+  if (typeof choice === 'object' && choice[match]) return true
   return false
 }
 
-function filter (key, choices) {
-  log('filter', key, choices)
+function filter (filters, key, choices) {
+  let matchers = filters[key]
+  let keys = Object.keys(matchers)
 
-  return filters[key].reduce((obj, matcher) => {
+  return keys.reduce((obj, fkey) => {
+    obj[key] = {}
+    let keyChoices = choices[key]
+    let matcher = matchers[fkey]
     let matchKeys = Object.keys(matcher)
+    // log('loop', keyChoices, matcher, matchKeys)
     for (let mk of matchKeys) {
-      if (matches(choices[key], mk)) {
-        obj[key] = matcher[mk]
+      // log('mk', keyChoices, mk)
+      if (matches(keyChoices, mk)) {
+        // log('matched', mk)
+        obj[key] = merge(obj[key], matcher[mk])
+      } else {
+        // log('NOT matched', mk)
       }
-      return obj
     }
+    return obj
   }, {})
 }
 
@@ -31,10 +37,10 @@ export default {
   // TODO: generate based on declarative filters
   filtered: (choices) => {
     let keys = Object.keys(filters)
-    log('keys', keys)
     // test, ...
-    return keys.map((key) => {
-      return filters[key] ? filter(key, choices) : choices
-    })
+    return keys.reduce((obj, key) => {
+      let f = filters[key] ? filter(filters, key, choices) : choices
+      return merge(obj, f)
+    }, {})
   }
 }
