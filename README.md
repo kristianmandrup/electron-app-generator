@@ -1,5 +1,7 @@
 # electron-app-generator
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kristianmandrup/electron-app-generator.svg)](https://greenkeeper.io/)
+
 Electron app to configure a project environment/setup, including dependencies & configuration for:
 - runtime
 - development environment & tools
